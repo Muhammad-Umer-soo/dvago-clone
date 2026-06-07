@@ -11,7 +11,6 @@ function Productmodal({ isModalOpen, setModalClose }) {
     price: number().required(),
     stock: number().required(),
     imgurl: string().required(),
-    category_id: number().required(),
   });
   const formik = useFormik({
     initialValues: {
@@ -19,7 +18,6 @@ function Productmodal({ isModalOpen, setModalClose }) {
       price: 0,
       stock: 0,
       imgurl: "",
-      category_id: 0,
     },
     onSubmit: async (data) => {
       console.log(data);
